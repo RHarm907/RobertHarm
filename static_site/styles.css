@@ -94,3 +94,20 @@ h1, h2 {
 .footer .right {
     text-align: right;
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .left, .footer .right {
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .footer .center {
+        margin: 10px 0;
+    }
+}
