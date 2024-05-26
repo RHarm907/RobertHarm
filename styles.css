@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* General body styling */
+body {
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-brand, .nav-link {
+    color: #f8f9fa !important;
+}
+
+/* Content container styling */
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: #f8f9fa;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-primary:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-secondary {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.btn-secondary:hover {
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+
+/* Header styling */
+h1, h2 {
+    color: #dc3545;
+}
