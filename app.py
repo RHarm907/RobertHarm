@@ -1,41 +1,37 @@
-import os
-from flask import Flask, render_template, request, redirect, url_for
-from flask_mail import Mail, Message
+from flask import Flask, request, render_template, redirect, url_for
 
 app = Flask(__name__)
 
-# Configure Flask-Mail for Gmail
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER')
-app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')
+@app.route('/')
+def home():
+    return render_template('index.html')
 
-mail = Mail(app)
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/schoolprojects')
+def schoolprojects():
+    return render_template('schoolprojects.html')
+
+@app.route('/personalprojects')
+def personalprojects():
+    return render_template('personalprojects.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
-        print("Received POST request")
         name = request.form['name']
         email = request.form['email']
         message = request.form['message']
-
-        # Send email
-        msg = Message('New Contact Form Submission', sender=app.config['MAIL_USERNAME'], recipients=[app.config['MAIL_USERNAME']])
-        msg.body = f'Name: {name}\nEmail: {email}\nMessage: {message}'
-        mail.send(msg)
-
+        # Here, you can handle the form data (e.g., save it to a database or send an email)
+        print(f"Received message from {name} ({email}): {message}")
         return redirect(url_for('thank_you'))
-    else:
-        print("Received GET request")
-    
     return render_template('contact.html')
 
-@app.route('/thank-you')
+@app.route('/thank_you')
 def thank_you():
-    return 'Thank you for your message!'
+    return '<h1>Thank you for your message!</h1>'
 
 if __name__ == '__main__':
     app.run(debug=True)
