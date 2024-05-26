@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Merriweather', serif;
+}
+
+.site-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
 
 body {
     background: url('images/background.jpg') no-repeat center center fixed;
@@ -8,10 +21,9 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-
 /* Navbar styling */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.9); /* Darker background */
+    background-color: rgba(0, 0, 0, 0.85); /* Darker background for readability */
 }
 
 .navbar-brand, .nav-link {
@@ -20,7 +32,7 @@ body {
 
 /* Content container styling */
 .container {
-    background-color: rgba(0, 0, 0, 0.95); /* Darker background */
+    background-color: rgba(0, 0, 0, 0.75); /* Darker background for readability */
     padding: 20px;
     border-radius: 10px;
     color: #f8f9fa;
@@ -28,26 +40,45 @@ body {
 
 /* Button styling */
 .btn-primary {
-    background-color: #ff69b4; /* Hot pink */
-    border-color: #ff69b4;
+    background-color: #5e4bfa; /* A royal purple to match the fantasy theme */
+    border-color: #5e4bfa;
 }
 
 .btn-primary:hover {
-    background-color: #ff1493; /* Deeper pink */
-    border-color: #ff1493;
+    background-color: #4a3aba; /* A deeper shade for hover effect */
+    border-color: #4a3aba;
 }
 
 .btn-secondary {
-    background-color: #00bfff; /* Deep sky blue */
-    border-color: #00bfff;
+    background-color: #7fc7ff; /* A light blue for contrast */
+    border-color: #7fc7ff;
 }
 
 .btn-secondary:hover {
-    background-color: #1e90ff; /* Dodger blue */
-    border-color: #1e90ff;
+    background-color: #5fa3e0; /* A deeper blue for hover effect */
+    border-color: #5fa3e0;
 }
 
 /* Header styling */
 h1, h2 {
-    color: #ff69b4; /* Hot pink */
+    color: #f8f9fa; /* Keeping headers white for better contrast */
+}
+
+/* Footer styling */
+.footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
