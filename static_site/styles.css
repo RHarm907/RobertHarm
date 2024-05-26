@@ -6,19 +6,18 @@ body, html {
     height: 100%;
     width: 100%;
     font-family: 'Merriweather', serif;
-    display: flex;
-    flex-direction: column;
 }
 
+.site-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
 body {
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #f8f9fa;
     font-family: 'Arial', sans-serif;
-}
-
-.main-content {
-    flex: 1 0 auto;
 }
 
 /* Navbar styling */
@@ -69,8 +68,9 @@ h1, h2 {
     background-color: rgba(0, 0, 0, 0.85);
     color: #f8f9fa;
     padding: 10px 0;
+    position: fixed;
     width: 100%;
-    flex-shrink: 0;
+    bottom: 0;
 }
 
 .footer .container {
