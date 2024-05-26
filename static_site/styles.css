@@ -2,7 +2,7 @@
 
 /* General body styling */
 body {
-    background: url('static_site/images/background.jpg') no-repeat center center fixed;
+    background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #f8f9fa;
     font-family: 'Arial', sans-serif;
