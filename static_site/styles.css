@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
 body {
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -8,7 +11,7 @@ body {
 
 /* Navbar styling */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background */
 }
 
 .navbar-brand, .nav-link {
@@ -17,7 +20,7 @@ body {
 
 /* Content container styling */
 .container {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.95); /* Darker background */
     padding: 20px;
     border-radius: 10px;
     color: #f8f9fa;
@@ -25,26 +28,26 @@ body {
 
 /* Button styling */
 .btn-primary {
-    background-color: #dc3545;
-    border-color: #dc3545;
+    background-color: #ff69b4; /* Hot pink */
+    border-color: #ff69b4;
 }
 
 .btn-primary:hover {
-    background-color: #c82333;
-    border-color: #bd2130;
+    background-color: #ff1493; /* Deeper pink */
+    border-color: #ff1493;
 }
 
 .btn-secondary {
-    background-color: #343a40;
-    border-color: #343a40;
+    background-color: #00bfff; /* Deep sky blue */
+    border-color: #00bfff;
 }
 
 .btn-secondary:hover {
-    background-color: #23272b;
-    border-color: #1d2124;
+    background-color: #1e90ff; /* Dodger blue */
+    border-color: #1e90ff;
 }
 
 /* Header styling */
 h1, h2 {
-    color: #dc3545;
+    color: #ff69b4; /* Hot pink */
 }
