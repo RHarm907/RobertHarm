@@ -8,11 +8,6 @@ body, html {
     font-family: 'Merriweather', serif;
 }
 
-.site-wrapper {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
 body {
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -68,9 +63,7 @@ h1, h2 {
     background-color: rgba(0, 0, 0, 0.85);
     color: #f8f9fa;
     padding: 10px 0;
-    position: fixed;
     width: 100%;
-    bottom: 0;
 }
 
 .footer .container {
