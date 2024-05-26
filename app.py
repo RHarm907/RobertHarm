@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask_mail import Mail, Message
 
@@ -8,8 +9,8 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = 'Portfolio.RHarm@gmail.com'
-app.config['MAIL_PASSWORD'] = 'aeqm gjix uhfz bbuq'
+app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER')
+app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')
 
 mail = Mail(app)
 
@@ -21,7 +22,7 @@ def contact():
         message = request.form['message']
 
         # Send email
-        msg = Message('New Contact Form Submission', sender='Portfolio.RHarm@gmail.com', recipients=['Portfolio.RHarm@gmail.com'])
+        msg = Message('New Contact Form Submission', sender=app.config['MAIL_USERNAME'], recipients=[app.config['MAIL_USERNAME']])
         msg.body = f'Name: {name}\nEmail: {email}\nMessage: {message}'
         mail.send(msg)
 
