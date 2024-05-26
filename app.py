@@ -17,6 +17,7 @@ mail = Mail(app)
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
+        print("Received POST request")
         name = request.form['name']
         email = request.form['email']
         message = request.form['message']
@@ -27,6 +28,8 @@ def contact():
         mail.send(msg)
 
         return redirect(url_for('thank_you'))
+    else:
+        print("Received GET request")
     
     return render_template('contact.html')
 
