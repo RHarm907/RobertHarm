@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="About Robert Harm - Game Designer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Harm - About Me</title>
     <link rel="stylesheet" href="static_site/styles.css">
@@ -23,41 +22,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Projects
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">School Projects</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="project1.html">Space Ship Project</a>
-                                <a class="dropdown-item" href="project2.html">Life and Death Project</a>
-                                <a class="dropdown-item" href="project3.html">Game Feature Project</a>
-                                <a class="dropdown-item" href="project4.html">Final Feature Project</a>
-                                <a class="dropdown-item" href="project5.html">Blockmesh - Level Design</a>
-                                <a class="dropdown-item" href="project6.html">Gold Presentation</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu">
-                            <a class="dropdown-item dropdown-toggle" href="#">Personal Projects</a>
-                            <div class="dropdown-menu">
-                                <!-- Add your personal projects here -->
-                            </div>
-                        </div>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
             </ul>
-            <span class="navbar-text mx-auto">
-                Robert Harm
-            </span>
         </div>
     </div>
 </nav>
-
 <div class="container my-5 content">
     <h1>About Me</h1>
     <p>My name is Robert Harm, and I am a passionate game designer with a fascination for the world of gaming and the intricate design and development processes behind it. Through my interest in how things work, I have developed skills in the following areas:</p>
@@ -72,7 +46,6 @@
     </ul>
     <p>I enjoy tackling new challenges and continuously strive to enhance my abilities. In my free time, I continue to educate myself through various platforms or work on personal projects to apply what I have learned and explore new concepts in game development.</p>
 </div>
-
 <footer class="footer mt-5 mt-auto">
     <div class="container d-flex justify-content-between">
         <div class="left"><a href="mailto:rsharm@student.fullsail.edu">rsharm@student.fullsail.edu</a></div>
@@ -80,27 +53,9 @@
         <div class="right"><a href="mailto:rharm907@gmail.com">rharm907@gmail.com</a></div>
     </div>
 </footer>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    // Enable dropdown-submenu
-    $(document).ready(function(){
-        $('.dropdown-submenu a.dropdown-toggle').on("click", function(e){
-            if(!$(this).next('div').hasClass('show')) {
-                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-            }
-            var $subMenu = $(this).next('div');
-            $subMenu.toggleClass('show');
-            
-            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e){
-                $('.dropdown-submenu .show').removeClass("show");
-            });
-            return false;
-        });
-    });
-</script>
 </body>
 </html>
